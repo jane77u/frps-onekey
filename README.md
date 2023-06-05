@@ -11,7 +11,12 @@ Frps服务端(amd64)一键配置脚本，Frp最新版本：0.45.0
 ## Frps-Onekey-Install-Shell For CentOS/Debian/Ubuntu/Fedora (32bit/64bit)
 
 ### Install（安装）
-
+#### Aliyun（已失效）
+```Bash
+wget https://code.aliyun.com/MvsCode/frps-onekey/raw/master/install-frps.sh -O ./install-frps.sh
+chmod 700 ./install-frps.sh
+./install-frps.sh install
+```
 #### Github
 ```Bash
 wget https://raw.githubusercontent.com/jane77u/frps-onekey/main/install-frps.sh -O ./install-frps.sh
