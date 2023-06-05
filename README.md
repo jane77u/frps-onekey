@@ -27,9 +27,9 @@ chmod 700 ./install-frps.sh
 
 AMD 64
 ```Bash
-wget https://raw.githubusercontent.com/jane77u/frps-onekey/main/install-frps_amd64.sh -O ./install-frps.sh
-chmod 700 ./install-frps.sh
-./install-frps.sh install
+wget https://raw.githubusercontent.com/jane77u/frps-onekey/main/install-frps_amd64.sh -O ./install-frps_amd64.sh
+chmod 700 ./install-frps_amd64.sh
+./install-frps_amd64.sh install
 ```
 
 ### Uninstall（卸载）
