@@ -6,6 +6,7 @@ Frps服务端一键配置脚本，Frp最新版本：0.45.0
 
 * 详情：fatedier (https://github.com/fatedier/frp)
 * 此脚本原作者：clangcn (https://github.com/clangcn/onekey-install-shell)
+* foke自：cMvsCode (https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh)
 
 ## Frps-Onekey-Install-Shell For CentOS/Debian/Ubuntu/Fedora (32bit/64bit)
 
@@ -19,7 +20,7 @@ chmod 700 ./install-frps.sh
 ```
 #### Github
 ```Bash
-wget https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh -O ./install-frps.sh
+wget https://raw.githubusercontent.com/jane77u/frps-onekey/main/install-frps.sh -O ./install-frps.sh
 chmod 700 ./install-frps.sh
 ./install-frps.sh install
 ```
