@@ -18,12 +18,19 @@ chmod 700 ./install-frps.sh
 ./install-frps.sh install
 ```
 #### Github
+ARM 64
 ```Bash
 wget https://raw.githubusercontent.com/jane77u/frps-onekey/main/install-frps.sh -O ./install-frps.sh
 chmod 700 ./install-frps.sh
 ./install-frps.sh install
 ```
 
+AMD 64
+```Bash
+wget https://raw.githubusercontent.com/jane77u/frps-onekey/main/install-frps_amd64.sh -O ./install-frps.sh
+chmod 700 ./install-frps.sh
+./install-frps.sh install
+```
 
 ### Uninstall（卸载）
 ```Bash
