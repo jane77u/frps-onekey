@@ -2,7 +2,7 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 ###export###
 export PATH
-export FRPS_VER=0.45.0
+export FRPS_VER=0.48.0
 export FRPS_INIT="https://raw.githubusercontent.com/jane77u/frps-onekey/main/frps.init"
 export aliyun_download_url="https://code.aliyun.com/MvsCode/frps-onekey/raw/master"
 export github_download_url="https://github.com/fatedier/frp/releases/download"
@@ -122,7 +122,7 @@ check_os_bit(){
     ARCHS=""
     if [[ `getconf WORD_BIT` = '32' && `getconf LONG_BIT` = '64' ]] ; then
         Is_64bit='y'
-        ARCHS="amd64"
+        ARCHS="arm64"
     else
         Is_64bit='n'
         ARCHS="386"
