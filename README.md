@@ -49,6 +49,24 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 
  <!-- vim-markdown-toc GFM -->
  
+* ## [v0.49.0 [2023/05/29]](#v0.49.0[2023/05/29])
+We have thoroughly refactored xtcp in this version to improve its penetration rate and stability.
+
+In this version, different penetration strategies can be attempted by retrying connections multiple times. Once a hole is successfully punched, the strategy will be recorded in the server cache for future reuse. When new users connect, the successfully penetrated tunnel can be reused instead of punching a new hole.
+
+Due to a significant refactor of xtcp, this version is not compatible with previous versions of xtcp.
+
+To use features related to xtcp, both frpc and frps need to be updated to the latest version.
+* ### NEW
+     > The frpc has added the nathole discover command for testing the NAT type of the current network.
+
+     > XTCP has been refactored, resulting in a significant improvement in the success rate of penetration.
+
+     > When verifying passwords, use subtle.ConstantTimeCompare and introduce a certain delay when the password is incorrect.
+
+    * ### FIX
+     > Fix the problem of lagging when opening multiple table entries in the frps dashboard.
+
 * ## [v0.48.0 [2023/03/08]](#v0.48.0[2023/03/08])
     * ### NEW
      > The httpconnect type in tcpmux now supports authentication through the parameters http_user and http_pwd.
@@ -58,9 +76,25 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      
      > The e2e testing has been switched to ginkgo v2.
 
+* ## [v0.47.0 [202/02/10]](#v0.47.0[2023/02/10])
+    * ### NEW
+     > Added config bandwidth_limit_mode in frpc, default value is client which is current behavior. Optional value is server, to enable bandwidth limit in server. The major aim is to let server plugin has the ability to modify bandwidth limit for each proxy.
+
+* ### Improve
+     > dns_server supports ipv6.
+
+     > frpc supports graceful shutdown for protocol quic.
+
+* ## [v0.46.1 [2023/01/10]](#v0.46.1[2023/01/10])
+    * ### FIX
+     > Server Plugin sends incorrect op name for NewWorkConn.
+
+     > QUIC stream leak.
+
 * ## [v0.46.0 [2022/12/18]](#v0.46.0[2022/12/18])
     * ### NEW
      > Add oidc_scope parameter to frpc when authentication_method = oidc.
+
      > Support quic protocol between frpc and frps.
 
     * ### Improve
