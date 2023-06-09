@@ -49,7 +49,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 
  <!-- vim-markdown-toc GFM -->
  
-* ## [v0.49.0 [2023/05/29]](#https://github.com/fatedier/frp/releases/tag/v0.49.0])
+* ## [v0.49.0 [2023/05/29]](#v0.49.0[2023/05/29]https://github.com/fatedier/frp/releases/tag/v0.49.0])
   We have thoroughly refactored xtcp in this version to improve its penetration rate and stability.
 
   In this version, different penetration strategies can be attempted by retrying connections multiple times. Once a hole is successfully punched, the strategy will be recorded in the server cache for future reuse. When new users connect, the successfully penetrated tunnel can be reused instead of punching a new hole.
