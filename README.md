@@ -49,7 +49,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 
  <!-- vim-markdown-toc GFM -->
  
-  * ## [v0.48.0 [2023/03/08]](#v0.41.0[2023/03/08])
+* ## [v0.48.0 [2023/03/08]](#v0.48.0[2023/03/08])
     * ### NEW
      > The httpconnect type in tcpmux now supports authentication through the parameters http_user and http_pwd.
 
@@ -58,11 +58,19 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      
      > The e2e testing has been switched to ginkgo v2.
 
-  * ## [v0.45.0 [2022/11/03]](#v0.45.0[2022/11/03])
+* ## [v0.46.0 [2022/12/18]](#v0.46.0[2022/12/18])
+    * ### NEW
+     > Add oidc_scope parameter to frpc when authentication_method = oidc.
+     > Support quic protocol between frpc and frps.
+
+    * ### Improve
+     > Upgrade oidc and oauth2 package which is forward compatible.
+
+* ## [v0.45.0 [2022/11/03]](#v0.45.0[2022/11/03])
     * ### Improve
      > Adjust http group load balancing to forward requests to each frpc proxy round robin. Previous behavior is always forwarding requests to a single proxy in the case of single concurrency.
 
-  * ## [v0.44.0 [2022/07/11]](#v0.44.0[2022/07/11])
+* ## [v0.44.0 [2022/07/11]](#v0.44.0[2022/07/11])
     * ### NEW
      > Use auto generated certificates if plugin_key_path and plugin_crt_path are empty for plugin https2https and https2http.
     
@@ -71,7 +79,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
     * ### FIX 
      > xtcp error with IPv6 address.
 
-  * ## [v0.43.0 [2022/05/28]](#v0.43.0[2022/05/28])
+* ## [v0.43.0 [2022/05/28]](#v0.43.0[2022/05/28])
     * ### NEW
      > Added route_by_http_user in http and tcpmux proxy to support routing to different clients by HTTP basic auth user.
     
@@ -79,14 +87,14 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      
      > Added tcpmux_passthrough in tcpmux proxy. If true, CONNECT request will be forwarded to frpc.
  
-  * ## [v0.42.0 [2022/04/22]](#v0.42.0[2022/04/22])
+* ## [v0.42.0 [2022/04/22]](#v0.42.0[2022/04/22])
     * ### NEW
      > Added new parameter config_dir in frpc to run multiple client instances in one process.
    
     * ### FIX 
      > Equal sign in environment variables causes parsing error.
  
- * ## [v0.41.0 [2022/03/24]](#v0.41.0[2022/03/24])
+* ## [v0.41.0 [2022/03/24]](#v0.41.0[2022/03/24])
     * ### NEW
      > Support go http pprof.
 
