@@ -51,13 +51,13 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
  <!-- vim-markdown-toc GFM -->
  
 * ## [v0.49.0 [2023/05/29]](#v0.49.0[2023/05/29]https://github.com/fatedier/frp/releases/tag/v0.49.0])
-  We have thoroughly refactored xtcp in this version to improve its penetration rate and stability.
+  我们在这个版本中彻底重构了 xtcp，以提高其渗透率和稳定性。
 
-  In this version, different penetration strategies can be attempted by retrying connections multiple times. Once a hole is successfully punched, the strategy will be recorded in the server cache for future reuse. When new users connect, the successfully penetrated tunnel can be reused instead of punching a new hole.
+  在此版本中，可以通过多次重试连接来尝试不同的渗透策略。成功打孔后，该策略将记录在服务器缓存中以备将来重用。当新用户连接时，成功穿透的隧道可以重复使用，而不是打新孔。
 
-  ##### Due to a significant refactor of xtcp, this version is not compatible with previous versions of xtcp.
+  ##### 由于 xtcp 的重大重构，此版本与以前版本的 xtcp 不兼容。
 
-  ##### To use features related to xtcp, both frpc and frps need to be updated to the latest version.
+  ##### 要使用与xtcp相关的功能，frpc和frps都需要更新到最新版本。
     * ### NEW
      > The frpc has added the nathole discover command for testing the NAT type of the current network.
 
