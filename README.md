@@ -54,7 +54,8 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 
 如果希望恢复到以前的默认值，则需要手动将这两个参数的值设置为false。
     * ### Features
-     > Added support for in stcp, sudp, xtcp. By default, only the same user is allowed to access. Use to allow access from any user. The visitor configuration now supports to connect to proxies of other users.allow_users*server_user
+     > Added support for in stcp, sudp, xtcp. By default, only the same user is allowed to access. Use to allow access from any user. 
+     The visitor configuration now supports to connect to proxies of other users.allow_users*server_user
 
      > Added fallback support to a specified alternative visitor when xtcp connection fails.
 
@@ -64,7 +65,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
     * ### FIXES
      > Fixed an issue where having proxies with the same name would cause previously working proxies to become ineffective in xtcp.
  
-* ## [v0.49.0 [2023/05/29]](#v0.49.0[2023/05/29]https://github.com/fatedier/frp/releases/tag/v0.49.0])
+* ## [v0.49.0 [2023/05/29]](#v0.49.0[2023/05/29])
   我们在这个版本中彻底重构了 xtcp，以提高其渗透率和稳定性。
 
   在此版本中，可以通过多次重试连接来尝试不同的渗透策略。成功打洞后，该策略将记录在服务器缓存中以做将来备用。当新用户连接时，成功穿透的隧道可以重复使用，而不是打新洞。
