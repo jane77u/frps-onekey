@@ -50,7 +50,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 
  <!-- vim-markdown-toc GFM -->
 * ## [v0.50.0 [2023/06/26]](#v0.49.0[2023/06/26]https://github.com/fatedier/frp/releases/tag/v0.50.0])
-为了增强安全性，tls_enable和disable_custom_tls_first_byte的默认值已设置为true。
+### 为了增强安全性，tls_enable和disable_custom_tls_first_byte的默认值已设置为true。
 
 如果希望恢复到以前的默认值，则需要手动将这两个参数的值设置为false。
     * ### Features
