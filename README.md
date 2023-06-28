@@ -63,7 +63,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
     * ### Improvements
      > Increased the default value of MaxStreamWindowSize for yamux to 6MB, improving traffic forwarding rate in high-latency scenarios.
 
-    * ### FIXES
+    * ### Fixes
      > Fixed an issue where having proxies with the same name would cause previously working proxies to become ineffective in xtcp.
  
 * ## [v0.49.0 [2023/05/29]](#v0.49.0[2023/05/29])
@@ -74,18 +74,18 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
   ##### 由于 xtcp 的重大重构，此版本与以前版本的 xtcp 不兼容。
 
   ##### 要使用与xtcp相关的功能，frpc和frps都需要更新到最新版本。
-    * ### NEW
+    * ### New
      > The frpc has added the nathole discover command for testing the NAT type of the current network.
 
      > XTCP has been refactored, resulting in a significant improvement in the success rate of penetration.
 
      > When verifying passwords, use subtle.ConstantTimeCompare and introduce a certain delay when the password is incorrect.
 
-    * ### FIX
+    * ### Fix
      > Fix the problem of lagging when opening multiple table entries in the frps dashboard.
 
 * ## [v0.48.0 [2023/03/08]](#v0.48.0[2023/03/08])
-    * ### NEW
+    * ### New
      > The httpconnect type in tcpmux now supports authentication through the parameters http_user and http_pwd.
 
     * ### Improved
@@ -103,13 +103,13 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > frpc supports graceful shutdown for protocol quic.
 
 * ## [v0.46.1 [2023/01/10]](#v0.46.1[2023/01/10])
-    * ### FIX
+    * ### Fix
      > Server Plugin sends incorrect op name for NewWorkConn.
 
      > QUIC stream leak.
 
 * ## [v0.46.0 [2022/12/18]](#v0.46.0[2022/12/18])
-    * ### NEW
+    * ### New
      > Add oidc_scope parameter to frpc when authentication_method = oidc.
 
      > Support quic protocol between frpc and frps.
@@ -122,16 +122,16 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > Adjust http group load balancing to forward requests to each frpc proxy round robin. Previous behavior is always forwarding requests to a single proxy in the case of single concurrency.
 
 * ## [v0.44.0 [2022/07/11]](#v0.44.0[2022/07/11])
-    * ### NEW
+    * ### New
      > Use auto generated certificates if plugin_key_path and plugin_crt_path are empty for plugin https2https and https2http.
     
      > Server dashboard supports TLS configs.
 
-    * ### FIX 
+    * ### Fix
      > xtcp error with IPv6 address.
 
 * ## [v0.43.0 [2022/05/28]](#v0.43.0[2022/05/28])
-    * ### NEW
+    * ### New
      > Added route_by_http_user in http and tcpmux proxy to support routing to different clients by HTTP basic auth user.
     
      > CONNECT method can be forwarded in http type proxy.
@@ -139,14 +139,14 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > Added tcpmux_passthrough in tcpmux proxy. If true, CONNECT request will be forwarded to frpc.
  
 * ## [v0.42.0 [2022/04/22]](#v0.42.0[2022/04/22])
-    * ### NEW
+    * ### New
      > Added new parameter config_dir in frpc to run multiple client instances in one process.
    
-    * ### FIX 
+    * ### Fix 
      > Equal sign in environment variables causes parsing error.
  
 * ## [v0.41.0 [2022/03/24]](#v0.41.0[2022/03/24])
-    * ### NEW
+    * ### New
      > Support go http pprof.
 
     * ### IMPROVE
@@ -155,25 +155,25 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > Create new connection to server for sudp visitor when needed, to avoid frequent reconnections.
 
 * ## [v0.40.0 [2022/03/13]](#v0.40.0[2022/03/13])
-    * ### NEW
+    * ### New
      > Added dial_server_timeout in frpc to specify connecting timeout to frps.
 
      > Additional EndpointParams can be set for OIDC.
 
      > Added CloseProxy operation in server plugin.
 
-    * ### IMPROVE
+    * ### Improve
      > Added some randomness in reconnect delay.
 
-    * ### FIX
+    * ### Fix
      > TLS server name is ignored when tls_trusted_ca_file isn’t set.
 
 * ## [v0.39.1 [2022/02/09]](#v0.39.1[2022/02/09])
-    * ### FIX
+    * ### Fix
      > Fixed IPv6 address parse issue.
 
 * ## [v0.39.0 [2022/01/28]](#v0.39.0[2022/01/28])
-    * ### NEW
+    * ### New
      > Added connect_server_local_ip in frpc to specify local IP connected to frps.
 
      > Added tcp_mux_keepalive_interval both in frpc and frps to set tcp_mux keepalive interval seconds if tcp_mux is enabled. After using this params, you can set heartbeat_interval to -1 to disable application layer heartbeat to reduce traffic usage(Make sure frps is in the latest version).
@@ -181,11 +181,11 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
     * ### Improve
      > Server Plugin: Added client_address in Login Operation.
      
-    * ### FIX
+    * ### Fix
      > Remove authentication for healthz api.
     
 * ## [v0.38.0 [2021/10/28]](#v0.38.0[2021/10/28])
-    * ### NEW
+    * ### New
      > Add /healthz API.
 
      > frpc support disable_custom_tls_first_byte .If set true, frpc will not send custom header byte.
@@ -194,7 +194,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > Use go standard embed package instead of statik.
 
 * ## [v0.37.1 [2021/08/04]](#v0.37.1[2021/08/04])
-    * ### FIX
+    * ### Fix
      > Plugin https2https not work.
 
      > context canceled problem for http_proxy plugin when multiple requests reuse same connection.
@@ -202,40 +202,40 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > In some cases, frps can't get server name for https proxy.
 
 * ## [v0.37.0 [2021/06/03]](#v0.37.0[2021/06/03])
-    * ### NEW
+    * ### New
      > frpc add subcommand verify to validate configures before running.
      
      > frpc support includes option to split multiple proxy configs into different files.
      
      > Support sudp in dashboard.
 
-    * ### FIX
+    * ### Fix
      > Use empty string as default value for dashboard user and password.
      
      > login_fail_exit is not valid when protocol = kcp.
      
 * ## [v0.36.2 [2021/03/22]](#v0.36.2[2021/03/22])
-    * ### IMPROVE
+    * ### Improve
      > Support reverseproxy to dashboard with additional parts in path.
 
-    * ### FIX
+    * ### Fix
      > Fix logic error when parsing configs.
 
 * ## [v0.36.1 [2021/03/19]](#v0.36.1[2021/03/19])
-    * ### FIX
+    * ### Fix
      > Fix bind_udp_port listen on error port.
 
 * ## [v0.36.0 [2021/03/17]](#v0.36.0[2021/03/17])
-    * ### NEW
+    * ### New
      > New plugin https2https.
 
      > frpc supports tls_server_name to override the default value from server_addr.
 
-    * ### IMPROVEMENT
+    * ### Improvement
      > Increase reconnect frequency if it occurs an network error between frpc and frps
 
 * ## [v0.35.1 [2021/01/25]](#v0.35.1[2021/01/25])
-    * ### FIX
+    * ### Fix
      > Reduce binary file size.
 
 * ## Shell Upadte [2021/01/24]
@@ -243,56 +243,56 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > Aliyun download url replace by Gitee download url
 
 * ## [v0.35.0 [2021/01/20]](#v0.35.0[2021/01/20])
-    * ### NEW
+    * ### New
      > Server Plugin supports HTTPS.
 
-    * ### FIX
+    * ### Fix
      > Fix IPv6 address parse problem.
 
      > HTTP type proxy can't handle websocket protocol due to error Connection header value.
 
 * ## [v0.34.3 [2020/11/20]](#v0.34.2[2020/11/20])
-    * ### NEW
+    * ### New
      > Command line parameters support enable_prometheus.
 
 * ## [v0.34.2 [2020/11/12]](#v0.34.2[2020/11/12])
-    * ### FIX
+    * ### Fix
      > Stream data transfer delay(e.g. chunked data) for HTTP type proxy.
 
 * ## [v0.34.1 [2020/10/01]](#v0.34.1[2020/10/01])
-    * ### NEW
+    * ### New
      > Support NTLM protocol for http proxy to connect frps.
 
      > Official docker image support on DockerHub and Github registry.
 
-    * ### FIX
+    * ### Fix
      > Fix a dashboard stats data lost problem after client reconnect more than 7 days.
 
      > Fix TLS certificate verification failed.
 
 
 * ## [v0.34.0 [2020/09/19]](#v0.34.0[2020/09/19])
-    * ### NEW
+    * ### New
      > Support TLS certificate and mutual TLS authentication.
 
      > Support set max UDP package size, default is 1500.
 
      > New e2e test framework.
 
-    * ### FIX
+    * ### Fix
      > UDP and SUDP proxy don't support compression and encrytion.
 
      > Call server plugins in fixed order.
 
 * ## [v0.33.0 [2020/04/27]](#v0.33.0[2020/04/27])
-    * ### NEW
+    * ### New
      > Server plugin add NewUserConn interface.
 
      > New proxy type sudp to provide a safe way to expose udp service like stcp.
 
      > Support load balancing for tcpmux.
 
-    * ### FIX
+    * ### Fix
      > Fix invalid of AuthenticateNewWorkConns in frpc.
       
      > Fix a panic problem if accept many connections concurrently.
