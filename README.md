@@ -54,7 +54,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 
 如果希望恢复到以前的默认值，则需要手动将这两个参数的值设置为false。
     * ### Features
-     > Added support for allow_users in stcp, sudp, xtcp. By default, only the same user is allowed to access. Use * to allow access from any user. The visitor configuration now supports server_user to connect to proxies of other users.
+     > Added support for in stcp, sudp, xtcp. By default, only the same user is allowed to access. Use to allow access from any user. The visitor configuration now supports to connect to proxies of other users.allow_users*server_user
 
      > Added fallback support to a specified alternative visitor when xtcp connection fails.
 
