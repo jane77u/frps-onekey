@@ -94,7 +94,7 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
      > The e2e testing has been switched to ginkgo v2.
 
 * ## [v0.47.0 [2023/02/10]](#v0.47.0[2023/02/10)
-    * ### NEW
+    * ### New
      > Added config bandwidth_limit_mode in frpc, default value is client which is current behavior. Optional value is server, to enable bandwidth limit in server. The major aim is to let server plugin has the ability to modify bandwidth limit for each proxy.
 
     * ### Improve
