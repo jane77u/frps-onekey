@@ -1,5 +1,5 @@
 
-Frps服务端一键配置脚本，Frp最新版本：0.50.0
+Frps服务端一键配置脚本，Frp最新版本：0.51.0
 ===========
 
 *Frp 是一个高性能的反向代理应用，可以帮助您轻松地进行内网穿透，对外网提供服务，支持 tcp, http, https 等协议类型，并且 web 服务支持根据域名进行路由转发。*
@@ -49,7 +49,19 @@ Frps onkey-install-shell Changelog<br>Frp版本更新说明
 ---------------------------------------
 
  <!-- vim-markdown-toc GFM -->
-* ## [v0.50.0 [2023/06/26]](#v0.49.0[2023/06/26]https://github.com/fatedier/frp/releases/tag/v0.50.0])
+* ## [v0.51.0 [2023/07/05]](#v0.51.0[2023/06/26]https://github.com/fatedier/frp/releases/tag/v0.51.0])
+    * ### Features
+     > frpc supports connecting to frps via the wss protocol by enabling the configuration protocol = wss.
+
+     > frpc supports stopping the service through the stop command.
+
+    * ### Improvements
+     > service.Run supports passing in context.
+
+    * ### Fixes
+     > Fix an issue caused by a bug in yamux that prevents wss from working properly in certain plugins.
+ 
+* ## [v0.50.0 [2023/06/26]](#v0.50.0[2023/06/26]https://github.com/fatedier/frp/releases/tag/v0.50.0])
   ##### 为了增强安全性，tls_enable和disable_custom_tls_first_byte的默认值已设置为true。
 
   如果希望恢复到以前的默认值，则需要手动将这两个参数的值设置为false。
